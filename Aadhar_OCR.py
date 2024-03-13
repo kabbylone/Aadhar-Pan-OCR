@@ -29,7 +29,7 @@ class Aadhar_OCR:
 
         # Extracting all the necessary details from the pruned text list.
         # 1) Aadhar Card No.
-        aadhar_no_pat = r'^[0-9]{4}\s[0-9]{4}\s[0-9]{4}$'
+        aadhar_no_pat = r'^[0-9]{12}$'
         for i in text_list:
             if re.match(aadhar_no_pat, i):
                 self.user_aadhar_no = i
